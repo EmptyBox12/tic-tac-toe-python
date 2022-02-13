@@ -10,10 +10,10 @@ class Board:
                 array[i].append("-")
         return array
 
-    def place_move(self, x, y, move):
+    def place_mark(self, x, y, mark):
         if(self.boardArray[y][x] == "-"):
-            self.boardArray[y][x] = move
-            return f"{move} is placed on {x,y}"
+            self.boardArray[y][x] = mark
+            return f"{mark} is placed on {x,y}"
         else:
             return "invalid move"
             
@@ -49,3 +49,10 @@ class Board:
             for j in range(3):
                 print(self.boardArray[i][j], end=" ")
             print("")
+
+    def check_occupied(self, x ,y):
+        if(self.boardArray[y][x] != "-"):
+            return True
+        else:
+            return False
+        
