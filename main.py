@@ -14,7 +14,7 @@ def start_game():
         while True:
             coordinates = input("Enter x and y coordinates (1 2): ")
             coordinate_list = coordinates.split(" ")
-            if(len(coordinate_list)==2 and (int(coordinate_list[0]) >= 0 and (int(coordinate_list[0]) <= 2) and (int(coordinate_list[1]) >= 0 and (int(coordinate_list[1]) <= 2)))):
+            if(len(coordinate_list)==2 and (coordinate_list[0] != "" and coordinate_list[1] != "") and (int(coordinate_list[0]) >= 0 and (int(coordinate_list[0]) <= 2) and (int(coordinate_list[1]) >= 0 and (int(coordinate_list[1]) <= 2)))):
                 if(not game_board.check_occupied(int(coordinate_list[0]), int(coordinate_list[1]))):
                     break
 
